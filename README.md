@@ -1,3 +1,8 @@
+This is a fork of DOSBox-X, targeted to Win9X Platform, Pentium3 CPU.  
+
+It uses opencow (https://github.com/crazii/opencow) to support Unicode APIs (the *W functions),  
+
+and uses a customized MinGW GCC toolchain (https://github.com/crazii/MINGW-toolchains-w9x/releases/tag/v1.0) to generate pentium3 instructions.  </br></br></br>
 
 **Welcome to the DOSBox-X project homepage located on GitHub.**
 
