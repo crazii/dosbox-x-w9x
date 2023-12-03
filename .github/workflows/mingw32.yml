@@ -273,16 +273,15 @@ jobs:
         shell: bash
         run: |
           top=`pwd`
-          which wget
           echo "${top}"
           export "MSYSTEM_PREFIX=/d/a/_temp/msys64/mingw32"
           echo "path=$PATH"
           cd ${MSYSTEM_PREFIX}/..
           ls -lg
           rm -rf /d/a/_temp/msys64/mingw32
-          mkdir mingw32
+          ls /usr/bin
           wget https://github.com/crazii/MINGW-toolchains-w9x/releases/download/v1.0.1-w95nt/mingw32.7z
-          7z x mingw32.7z -o${MSYSTEM_PREFIX}
+          7z x mingw32.7z -o/d/a/_temp/msys64/
           echo "MSYSTEM_PREFIX=${MSYSTEM_PREFIX}"
           chmod +x ${MSYSTEM_PREFIX}/bin/*.*
           chmod +x ${MSYSTEM_PREFIX}/i686-w64-mingw32/bin/*.*
