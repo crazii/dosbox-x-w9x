@@ -256,7 +256,7 @@ jobs:
         with:
           msystem: MINGW32
           update: true
-          install: git make mingw-w64-i686-libtool autoconf automake 7z
+          install: git make mingw-w64-i686-libtool autoconf automake p7zip
       - name: Update build info
         shell: bash
         run: |
