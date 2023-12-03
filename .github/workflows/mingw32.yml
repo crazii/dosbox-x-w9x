@@ -273,6 +273,7 @@ jobs:
         shell: bash
         run: |
           top=`pwd`
+          which wget
           echo "${top}"
           export "MSYSTEM_PREFIX=/d/a/_temp/msys64/mingw32"
           echo "path=$PATH"
