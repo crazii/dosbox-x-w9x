@@ -283,7 +283,6 @@ jobs:
           echo "MSYSTEM_PREFIX=${MSYSTEM_PREFIX}"
           chmod +x ${MSYSTEM_PREFIX}/bin/*.*
           chmod +x ${MSYSTEM_PREFIX}/i686-w64-mingw32/bin/*.*
-          chmod +x ${MSYSTEM_PREFIX}/opt/bin/*.*
       - name: Build MinGW32 lowend9x
         run: |
           top=`pwd`
