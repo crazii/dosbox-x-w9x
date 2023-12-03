@@ -256,7 +256,7 @@ jobs:
         with:
           msystem: MINGW32
           update: true
-          install: git wget make mingw-w64-i686-libtool autoconf automake
+          install: git make mingw-w64-i686-libtool autoconf automake
       - name: Update build info
         shell: bash
         run: |
@@ -270,7 +270,6 @@ jobs:
           echo "#define COPYRIGHT_END_YEAR \"${copyrightyear}\"" >> include/build_timestamp.h
           cat include/build_timestamp.h
       - name: setup lowend9x build environment
-        shell: bash
         run: |
           top=`pwd`
           echo "${top}"
@@ -278,10 +277,9 @@ jobs:
           echo "path=$PATH"
           cd ${MSYSTEM_PREFIX}/..
           ls -lg
-          rm -rf /d/a/_temp/msys64/mingw32
-          ls /usr/bin
+          rm -rf /d/a/_temp/msys64/mingw32         
           wget https://github.com/crazii/MINGW-toolchains-w9x/releases/download/v1.0.1-w95nt/mingw32.7z
-          7z x mingw32.7z -o/d/a/_temp/msys64/
+          7z x mingw32.7z -o./
           echo "MSYSTEM_PREFIX=${MSYSTEM_PREFIX}"
           chmod +x ${MSYSTEM_PREFIX}/bin/*.*
           chmod +x ${MSYSTEM_PREFIX}/i686-w64-mingw32/bin/*.*
